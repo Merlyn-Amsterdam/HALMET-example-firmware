@@ -5,6 +5,9 @@
 
 namespace sensesp {
 
+// 1-Wire data pin on SH-ESP32
+#define ONEWIRE_PIN 4    
+
 // I2C pins on HALMET.
 const int kSDAPin = 21;
 const int kSCLPin = 22;
@@ -17,7 +20,7 @@ const gpio_num_t kCANRxPin = GPIO_NUM_18;
 const gpio_num_t kCANTxPin = GPIO_NUM_19;
 
 // HALMET digital input pins
-const int kDigitalInputPin1 = GPIO_NUM_23;
+const int kDigitalInputPin1 = GPIO_NUM_23;    //tacho_d1 Blauw zwart 
 const int kDigitalInputPin2 = GPIO_NUM_25;
 const int kDigitalInputPin3 = GPIO_NUM_27;
 const int kDigitalInputPin4 = GPIO_NUM_26;

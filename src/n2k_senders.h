@@ -12,6 +12,9 @@
 
 namespace sensesp {
 
+////////////////////////////////////////////////////////////////////////////
+//N2kEngineParameterRapidSender
+
 /**
  * @brief Transmit NMEA 2000 PGN 127488: Engine Parameters, Rapid Update
  *
@@ -88,6 +91,9 @@ class N2kEngineParameterRapidSender : public Startable, public Configurable {
   ExpiringValue<double> engine_boost_pressure_;
   ExpiringValue<int8_t> engine_tilt_trim_;
 };
+
+////////////////////////////////////////////////////////////////////////////
+//N2kEngineParameterDynamicSender
 
 /**
  * @brief Transmit NMEA 2000 PGN 127489: Engine Parameters, Dynamic
@@ -274,6 +280,10 @@ class N2kEngineParameterDynamicSender : public Startable, public Configurable {
   ExpiringValue<bool> engine_shutting_down_;
 };
 
+
+////////////////////////////////////////////////////////////////////////////
+//N2kFluidLevelSender
+
 /**
  * @brief Transmit NMEA 2000 PGN 127505: Fluid Level
  *
@@ -352,6 +362,21 @@ class N2kFluidLevelSender : public Configurable, public Startable {
   double tank_capacity_;              // in liters
   ExpiringValue<double> tank_level_;  // in percent
 };
+
+
+////////////////////////////////////////////////////////////////////////////
+//N2k...........
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+//N2k..........
+
+
+
+
+
 
 }  // namespace sensesp
 

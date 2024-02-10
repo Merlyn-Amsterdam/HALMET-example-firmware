@@ -8,6 +8,14 @@
 using namespace sensesp;
 
 
+//
+// Create a digital input counter sensor rpm_counter is direct van de W draad!
+// In de UI wordt Sensor/Counter aangemaakt waarin de read delay (500)kan worden aangepast
+  auto rpm_counter = new DigitalInputCounter(23, INPUT, FALLING, 500, "/Sensors/Counter");
+//
+
+
+
 // Default RPM count scale factor, corresponds to 100 pulses per revolution.
 // This is rarely, if ever correct.
 const float kDefaultFrequencyScale = 1/100.;
